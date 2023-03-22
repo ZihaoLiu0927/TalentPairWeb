@@ -1,10 +1,21 @@
 import faker from 'faker';
 
-let products = '';
+import React from 'react';
+import App from './App';
+import { createRoot } from 'react-dom/client';
 
-for (let i = 0; i < 5; i++) {
-    const name = faker.commerce.productName();
-    products += `<div>${name}</div>`;
-}
+const rootElement = document.getElementById('root');
+const root = createRoot(rootElement);
 
-document.querySelector('.dev-landing').innerHTML = products;
+root.render(
+    <App />
+);
+
+// let products = '';
+
+// for (let i = 0; i < 5; i++) {
+//     const name = faker.commerce.productName();
+//     products += `<div>${name}</div>`;
+// }
+
+// document.querySelector('.dev-landing').innerHTML = products;

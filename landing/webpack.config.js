@@ -6,6 +6,20 @@ module.exports = {
     devServer: {
         port: 8081
     },
+    module: {
+        rules: [
+          {
+            test: /\.js$/,
+            exclude: /node_modules/,
+            use: {
+              loader: 'babel-loader',
+              options: {
+                presets: ['@babel/preset-react']
+              }
+            }
+          }
+        ]
+    },
     plugins: [
         new ModuleFederationPlugin({
             name: 'landing',
