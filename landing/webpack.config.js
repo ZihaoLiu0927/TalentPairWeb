@@ -25,7 +25,7 @@ module.exports = {
             name: 'landing',
             filename: 'remoteEntry.js',
             exposes: {
-                './LandingIndex': './src/index',
+                './LandingIndex': './src/bootstrap',
             },
             shared: [
                 'faker',
