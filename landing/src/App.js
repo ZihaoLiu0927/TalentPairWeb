@@ -1,14 +1,20 @@
 import React, { Component } from 'react';
 import './css/style.css';
 
+import './components/SectionAbout';
+import SectionAbout from './components/SectionAbout';
+import SectionIntro from './components/SectionIntro';
+import { BrowserRouter } from 'react-router-dom';
+
 class App extends Component {
   render() {
     return (
-            <div>
-            <h1>Hello World!</h1>
-            </div>
-        );
+        <BrowserRouter>
+          <SectionAbout />
+          <SectionIntro />
+        </BrowserRouter>
+      );
     }
 }
 
-export default App
+export default App;

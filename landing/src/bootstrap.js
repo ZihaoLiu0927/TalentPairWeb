@@ -1,12 +1,18 @@
 import React, { StrictMode } from 'react';
 import App from './App';
 import ReactDOM from "react-dom/client";
+import { Helmet, HelmetProvider } from 'react-helmet-async';
 
 const mount = (element) => {
     const root = ReactDOM.createRoot(element);
     root.render(
         <StrictMode>
-            <App />
+            <HelmetProvider>
+                <Helmet>
+                    <title>TalentPair | a platform ...</title>
+                </Helmet>
+                <App />
+            </HelmetProvider>
         </StrictMode>
     );
 };

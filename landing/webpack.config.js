@@ -4,20 +4,32 @@ const ModuleFederationPlugin = require('webpack/lib/container/ModuleFederationPl
 module.exports = {
     mode: "development",
     devServer: {
-        port: 8081
+        port: 8081,
+        //historyApiFallback: true,
     },
     module: {
         rules: [
           {
             test: /\.js$/,
-            exclude: /node_modules/,
             use: {
               loader: 'babel-loader',
               options: {
                 presets: ['@babel/preset-react']
               }
             }
-          }
+          },
+
+          {
+            test: /\.css$/i,
+            use: ["style-loader", "css-loader"],
+          },
+
+          {
+            test: /\.png$/,
+            use: {
+                loader: 'file-loader',
+              }
+          },
         ]
     },
     plugins: [

@@ -1,0 +1,48 @@
+.section-about {
+
+    animation: moveInShade 1.5s ease-in;
+
+    position: relative;
+
+    padding: 20rem 0;
+    height: 100%;
+
+    &--fig {
+
+        &-img {
+            object-fit: contain;
+            width:100%;
+            height:100%;
+        }
+    }
+
+    &--text {
+        padding: 0;
+    }
+}
+
+.section-intro {
+
+    animation: moveInShade 1.5s ease-in;
+
+    &--signlink {
+
+        &,
+        &:link, 
+        &:visited {
+            display: inline-block;
+            margin-left: 4rem;
+            margin-top: 3rem;
+    
+            font-size: 3rem;
+    
+            color: red;
+        }
+
+
+        &:hover {
+            @include focused-text;
+        }
+    }
+    
+}

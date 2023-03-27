@@ -1,0 +1,10 @@
+@mixin focused-text {
+    transform: translateY(-.6rem);
+    transition: all .3s;
+}
+
+@mixin focused-text-scale {
+    transform: translateY(-.8rem) scale(1.05);
+    transition: all .3s;
+    cursor: grab;
+}
