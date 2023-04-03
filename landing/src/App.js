@@ -1,18 +1,27 @@
 import React, { Component } from 'react';
-import './css/style.css';
+import { BrowserRouter } from 'react-router-dom';
+import { StylesProvider, createGenerateClassName } from '@material-ui/styles';
 
+import './css/style.css';
 import './components/SectionAbout';
 import SectionAbout from './components/SectionAbout';
 import SectionIntro from './components/SectionIntro';
-import { BrowserRouter } from 'react-router-dom';
+
+const generateClassName = createGenerateClassName({
+  productionPrefix: 'landing',
+});
 
 class App extends Component {
   render() {
     return (
-        <BrowserRouter>
-          <SectionAbout />
-          <SectionIntro />
-        </BrowserRouter>
+      <div>
+        <StylesProvider generateClassName={generateClassName}>
+          <BrowserRouter>
+            <SectionAbout />
+            <SectionIntro />
+          </BrowserRouter>
+        </StylesProvider>
+      </div>
       );
     }
 }
