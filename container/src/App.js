@@ -9,7 +9,7 @@ export default () => {
         <div className='global_container'>
             <Header />
             <LandingPage />
-            <div>--------------------------------</div>
+            <div>---------------placeholder-----------------</div>
             <LoginPage />
         </div>
     );
