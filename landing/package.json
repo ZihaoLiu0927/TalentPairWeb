@@ -13,12 +13,13 @@
   "dependencies": {
     "css-selector": "^0.1.0",
     "faker": "^5.5.3",
+    "history": "^4.10.1",
     "html-webpack-plugin": "^5.5.0",
     "jqeury": "^0.0.1-security",
     "prop-types": "^15.8.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-router-dom": "^6.9.0",
+    "react-router-dom": "^5.3.4",
     "semantic-ui-react": "^2.1.4"
   },
   "devDependencies": {
@@ -26,7 +27,6 @@
     "@babel/plugin-transform-runtime": "^7.21.4",
     "@babel/preset-env": "^7.21.4",
     "@babel/preset-react": "^7.18.6",
-    "@material-ui/styles": "^4.11.5",
     "babel-loader": "^9.1.2",
     "css-loader": "^6.7.3",
     "file-loader": "^6.2.0",

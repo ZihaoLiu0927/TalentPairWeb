@@ -1,29 +1,23 @@
-import React, { Component } from 'react';
-import { BrowserRouter } from 'react-router-dom';
-import { StylesProvider, createGenerateClassName } from '@material-ui/styles';
+import React, { StrictMode, Component } from 'react';
+import { Router, Route, Switch } from 'react-router-dom';
 
 import './css/style.css';
-import './components/SectionAbout';
 import SectionAbout from './components/SectionAbout';
 import SectionIntro from './components/SectionIntro';
 
-const generateClassName = createGenerateClassName({
-  productionPrefix: 'landing',
-});
 
-class App extends Component {
-  render() {
+export default ( { history } ) => {
+
     return (
-      <div>
-        <StylesProvider generateClassName={generateClassName}>
-          <BrowserRouter>
-            <SectionAbout />
-            <SectionIntro />
-          </BrowserRouter>
-        </StylesProvider>
-      </div>
-      );
-    }
-}
-
-export default App;
+      <StrictMode>
+        <div>
+            <Router history={history}>
+              <Switch>
+                <Route exact path="/intro" render={() => <div><SectionIntro/></div>} />
+                <Route path="/" render={() => <div><SectionAbout /><SectionIntro /></div>} />
+              </Switch>
+            </Router>
+        </div>
+      </StrictMode>
+    );
+};

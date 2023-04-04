@@ -1,26 +1,38 @@
-import React, { StrictMode } from 'react';
+import React from 'react';
 import App from './App';
 import ReactDOM from "react-dom/client";
-import { Helmet, HelmetProvider } from 'react-helmet-async';
+import { createMemoryHistory, createBrowserHistory } from 'history';
 
-const mount = (element) => {
+const mount = (element, { onNavigate, defaultHistory }) => {
+
+    const history = defaultHistory || createMemoryHistory();
+
+    if (onNavigate) {
+        history.listen(onNavigate);
+    }
+
     const root = ReactDOM.createRoot(element);
+
     root.render(
-        <StrictMode>
-            <HelmetProvider>
-                <Helmet>
-                    <title>TalentPair | a platform ...</title>
-                </Helmet>
-                <App />
-            </HelmetProvider>
-        </StrictMode>
+        <App history={history}/>
     );
+
+    return {
+        onParentNavigate({ pathname: nextPathName }) {
+            const { pathname } = history.location;
+
+            if (nextPathName !==  pathname) {
+                history.push(nextPathName);
+            }
+        }
+    };
 };
 
 if (process.env.NODE_ENV === 'development') {
     const element = document.querySelector('.root');
+
     if (element) {
-        mount(element)
+        mount(element, { defaultHistory: createBrowserHistory() });
     };
 }
 

@@ -9,9 +9,9 @@ const devConfig = {
     devtool: 'inline-source-map',
     devServer: {
         port: 8081,
-        // historyApiFallback: {
-        //     index: 'index.html',
-        // }
+        historyApiFallback: {
+            index: '/index.html',
+        }
     },
     plugins: [
         new ModuleFederationPlugin({
