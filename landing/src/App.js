@@ -1,4 +1,4 @@
-import React, { StrictMode, Component } from 'react';
+import React, { StrictMode } from 'react';
 import { Router, Route, Switch } from 'react-router-dom';
 
 import './css/style.css';
@@ -13,8 +13,8 @@ export default ( { history } ) => {
         <div>
             <Router history={history}>
               <Switch>
-                <Route exact path="/intro" render={() => <div><SectionIntro/></div>} />
-                <Route path="/" render={() => <div><SectionAbout /><SectionIntro /></div>} />
+                <Route exact path="/intro" render={()=><div><SectionIntro/></div>} />
+                <Route path="/" render={()=><div><SectionAbout /><SectionIntro /></div>} />
               </Switch>
             </Router>
         </div>

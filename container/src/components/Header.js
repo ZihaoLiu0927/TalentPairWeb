@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import logo from '../../img/logo.png';
 
 export default function Header() {
@@ -26,7 +27,7 @@ export default function Header() {
           </a>
         </div>
         <div>
-          <a href="#" className="inline-block text-3xl px-4 py-2 font-semibold leading-none border rounded text-white border-white hover:border-transparent hover:text-teal-500 hover:bg-white mt-4 lg:mt-0">Log in</a>
+          <Link to="/auth/signin" className="inline-block text-3xl px-4 py-2 font-semibold leading-none border rounded text-white border-white hover:border-transparent hover:text-teal-500 hover:bg-white mt-4 lg:mt-0">Log in</Link>
         </div>
       </div>
     </nav>

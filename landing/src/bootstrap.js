@@ -3,9 +3,11 @@ import App from './App';
 import ReactDOM from "react-dom/client";
 import { createMemoryHistory, createBrowserHistory } from 'history';
 
-const mount = (element, { onNavigate, defaultHistory }) => {
+const mount = (element, { onNavigate, defaultHistory, initialPath }) => {
 
-    const history = defaultHistory || createMemoryHistory();
+    const history = defaultHistory || createMemoryHistory({
+        initialEntries: [initialPath]
+    });
 
     if (onNavigate) {
         history.listen(onNavigate);

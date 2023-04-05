@@ -1,33 +1,27 @@
-import {mount as landingMount} from 'landing/LandingIndex';
+import { mount as landingMount} from 'landing/LandingIndex';
 import React, {useRef, useEffect, useState} from 'react';
-import { useNavigate, useLocation } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 
 export default () => {
     const ref = useRef(null);
-    const navigate = useNavigate()
-    const location = useLocation();
-    const [func, setFunc] = useState(() => () => 1);
+    const history = useHistory();
     
     useEffect(() => {
 
-        console.log("mounting landing");
-
         const { onParentNavigate } = landingMount(ref.current, {
+            initialPath: history.location.pathname,
+
             onNavigate: ({ pathname: nextPathName }) => {
-                const { pathname } = window.location;
+                const { pathname } = history.location;
                 if (pathname !== nextPathName) {
-                    navigate(nextPathName);
+                    history.push(nextPathName);
                 };
             }
         });
         
-        setFunc(() => (x) => onParentNavigate(x));
+        history.listen(onParentNavigate);
 
     }, []);
-
-    useEffect(() => {
-        func(location);
-    }, [location]);
     
     return <div ref={ref} />;
 };
