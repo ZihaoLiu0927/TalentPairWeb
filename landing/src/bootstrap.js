@@ -3,38 +3,33 @@ import App from './App';
 import ReactDOM from "react-dom/client";
 import { createMemoryHistory, createBrowserHistory } from 'history';
 
-const mount = (element, { onNavigate, defaultHistory, initialPath }) => {
+let root = null;
 
-    const history = defaultHistory || createMemoryHistory({
-        initialEntries: [initialPath]
-    });
+const mount = (element, { onNavigate, location }) => {
+    if (!element.firstChild) {
+        root = ReactDOM.createRoot(element);
+    }
+    
+    const history = location ? createMemoryHistory({
+        initialEntries: [location.pathname] 
+    }) : createBrowserHistory();
 
     if (onNavigate) {
         history.listen(onNavigate);
     }
 
-    const root = ReactDOM.createRoot(element);
+    root =  root ? root : ReactDOM.createRoot(element);
 
     root.render(
-        <App history={history}/>
+        <App location = {location} history={history}/>
     );
-
-    return {
-        onParentNavigate({ pathname: nextPathName }) {
-            const { pathname } = history.location;
-
-            if (nextPathName !==  pathname) {
-                history.push(nextPathName);
-            }
-        }
-    };
 };
 
 if (process.env.NODE_ENV === 'development') {
     const element = document.querySelector('.root');
 
     if (element) {
-        mount(element, { defaultHistory: createBrowserHistory() });
+        mount(element, {});
     };
 }
 

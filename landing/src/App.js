@@ -1,21 +1,30 @@
-import React, { StrictMode } from 'react';
-import { Router, Route, Switch } from 'react-router-dom';
+import React, {useState, StrictMode } from 'react';
+import { Router, Route, Routes, useLocation, useNavigate } from 'react-router-dom';
 
 import './css/style.css';
 import SectionAbout from './components/SectionAbout';
 import SectionIntro from './components/SectionIntro';
 
 
-export default ( { history } ) => {
+export default ( props ) => {
+
+  const { history, location } = props;
+  const [isolationLocation, setIsolationLocation] = useState(history.location);
+
+  if (location === undefined) {
+    history.listen( ({ location }) => {
+      setIsolationLocation(location);
+    });
+  }
 
     return (
       <StrictMode>
         <div>
-            <Router history={history}>
-              <Switch>
-                <Route exact path="/intro" render={()=><div><SectionIntro/></div>} />
-                <Route path="/" render={()=><div><SectionAbout /><SectionIntro /></div>} />
-              </Switch>
+            <Router location={location || isolationLocation} navigator={history}>
+              <Routes>
+                <Route exact path="/intro" element={<div><SectionIntro/></div>} />
+                <Route path="/" element={<div><SectionAbout /><SectionIntro /></div>} />
+              </Routes>
             </Router>
         </div>
       </StrictMode>
