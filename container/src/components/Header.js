@@ -10,19 +10,19 @@ export default function Header() {
         <img src={logo} className="fill-current h-40 w-40 mr-2" /> 
         <span className="font-semibold text-xl tracking-tight"></span>
       </div>
-      <div className="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
-        <div className="text-sm lg:flex-grow">
+      <div className="flex-grow flex items-center w-auto">
+        <div className="text-sm flex-grow">
           {/* navbar mid placeholder */}
         </div>
 
         <div className="inline-block mr-16">
-          <a href="#" className="block mt-2 text-3xl font-semibold lg:inline-block lg:mt-0 text-cyan-400 hover:text-white mr-8">
+          <a href="#" className="inline-block mt-2 text-3xl font-semibold text-cyan-400 hover:text-white mr-8">
             Docs
           </a>
-          <a href="#" className="block mt-2 text-3xl font-semibold lg:inline-block lg:mt-0 text-cyan-400 hover:text-white mr-8">
+          <a href="#" className="inline-block mt-2 text-3xl font-semibold text-cyan-400 hover:text-white mr-8">
             Examples
           </a>
-          <a href="#" className="block mt-2 text-3xl font-semibold lg:inline-block lg:mt-0 text-cyan-400 hover:text-white">
+          <a href="#" className="inline-block mt-2 text-3xl font-semibold text-cyan-400 hover:text-white">
             Blog
           </a>
         </div>
