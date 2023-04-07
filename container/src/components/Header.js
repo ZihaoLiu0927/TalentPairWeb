@@ -18,7 +18,7 @@ export default function Header( { isSignedIn, onSignOut } ) {
       </div>
       <div className="flex-grow flex items-center w-auto">
         <div className="text-sm flex-grow">
-          {/* navbar mid placeholder */}
+          {/* placeholder */}
         </div>
 
         <div className="inline-block mr-16">
