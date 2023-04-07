@@ -1,24 +1,22 @@
 import React from 'react';
-import { makeStyles, createStyles } from '@material-ui/core/styles';
-import LinearProgress from '@material-ui/core/LinearProgress';
+import { styled } from '@mui/material/styles';
+import { LinearProgress } from '@mui/material';
 
-const useStyles = makeStyles((theme) => {
-  return createStyles({
-    bar: {
-      width: '100%',
-      '& > * + *': {
-        marginTop: theme.spacing(2),
-      }
-    },
-  });
-});
+const StyleWrapper = styled('div')(
+  ({ theme }) => `
+  background-color: ${theme.palette.background.paper};
+  box-shadow: ${theme.shadows[1]};
+  border-radius: ${theme.shape.borderRadius}px;
+  padding: ${theme.spacing(2)};
+  min-width: 300px;
+`,
+);
 
 export default () => {
-    const classes = useStyles();
 
     return (
-        <div className={classes.bar}>
+        <StyleWrapper>
             <LinearProgress />
-        </div>
+        </StyleWrapper>
     );
 }
