@@ -2,7 +2,13 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../../img/logo.png';
 
-export default function Header() {
+export default function Header( { isSignedIn, onSignOut } ) {
+
+  const onClick = () => {
+    if ( isSignedIn && onSignOut) {
+      onSignOut();
+    }
+  }
 
   return (
     <nav className="flex items-center justify-between flex-wrap bg-emerald-950 p-14 rounded-sm">
@@ -27,7 +33,9 @@ export default function Header() {
           </a>
         </div>
         <div>
-          <Link to="/auth/signin" className="inline-block text-3xl px-4 py-2 font-semibold leading-none border rounded text-white border-white hover:border-transparent hover:text-teal-500 hover:bg-white mt-4 lg:mt-0">Log in</Link>
+          <Link to={isSignedIn ? '/' : '/auth/signin'} onClick={onClick} className="inline-block text-3xl px-4 py-2 font-semibold leading-none border rounded text-white border-white hover:border-transparent hover:text-teal-500 hover:bg-white mt-4 lg:mt-0">
+            {isSignedIn ? 'Logout' : 'Login'}
+          </Link>
         </div>
       </div>
     </nav>

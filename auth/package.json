@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "webpack serve --config config/webpack.dev.js",
-    "compile:tailwind": "npx tailwindcss -i src/style.css -o ./src/tailwind/style.css --watch"
+    "compile:tailwind": "npx tailwindcss -c ./config/tailwind.config.js -i src/style.css -o ./src/tailwind/style.css --watch"
   },
   "keywords": [],
   "author": "",

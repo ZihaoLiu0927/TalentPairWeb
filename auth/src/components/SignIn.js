@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import { Link } from 'react-router-dom';
 
-export default function SignIn() {
+export default function SignIn( { onSignIn } ) {
 
     const [email, setEmail] = useState('');
 
@@ -42,7 +42,7 @@ export default function SignIn() {
                     <div className="flex items-center">
                         <div className="w-2/3"></div>
                         <div className="w-1/3">
-                        <button className="shadow bg-purple-500 hover:bg-purple-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded" type="button">
+                        <button onClick={onSignIn} className="shadow bg-purple-500 hover:bg-purple-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded" type="button">
                             Sign In
                         </button>
                         </div>
@@ -51,6 +51,5 @@ export default function SignIn() {
                 </form>
                 </div>
             </div>
-
     );
 }

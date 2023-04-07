@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import { Link } from 'react-router-dom';
 
-export default function SignUp() {
+export default function SignUp( { onSignIn } ) {
 
     const [email, setEmail] = useState('');
 
@@ -33,7 +33,7 @@ export default function SignUp() {
                     <div className="flex items-center">
                         <div className="w-2/3"></div>
                         <div className="w-1/3">
-                        <button className="shadow bg-blue-500 hover:bg-blue-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded" type="button">
+                        <button onClick={onSignIn} className="shadow bg-blue-500 hover:bg-blue-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded" type="button">
                             Register
                         </button>
                         </div>

@@ -5,7 +5,7 @@ import { createMemoryHistory, createBrowserHistory } from 'history';
 
 let root = null;
 
-const mount = (element, { onNavigate, location }) => {
+const mount = (element, { onNavigate, onSignIn, location }) => {
     if (!element.firstChild) {
         root = ReactDOM.createRoot(element);
     }
@@ -21,7 +21,7 @@ const mount = (element, { onNavigate, location }) => {
     root =  root ? root : ReactDOM.createRoot(element);
 
     root.render(
-        <App location = {location} history={history}/>
+        <App location = {location} history={history} onSignIn={onSignIn} />
     );
 };
 
