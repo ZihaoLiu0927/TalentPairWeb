@@ -17,9 +17,7 @@ export default function Header( { isSignedIn, onSignOut } ) {
         <span className="font-semibold text-xl tracking-tight"></span>
       </div>
       <div className="flex-grow flex items-center w-auto">
-        <div className="text-sm flex-grow">
-          {/* placeholder */}
-        </div>
+        <div className="text-sm flex-grow"></div>
 
         <div className="inline-block mr-16">
           <a href="#" className="inline-block mt-2 text-3xl font-semibold text-cyan-400 hover:text-white mr-8">
