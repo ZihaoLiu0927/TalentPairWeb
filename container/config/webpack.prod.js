@@ -16,7 +16,7 @@ const prodConfig = {
             name: 'container',
             remotes: {
                 landing: `landing@${domain}/landing/latest/remoteEntry.js`,
-                login: `login@${domain}/login/latest/remoteEntry.js`
+                login: `auth@${domain}/auth/latest/remoteEntry.js`
             },
             shared: packageJson.dependencies
         }),

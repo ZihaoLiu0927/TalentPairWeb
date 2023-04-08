@@ -1,4 +1,4 @@
-import { mount } from 'login/LoginIndex';
+import { mount } from 'auth/LoginIndex';
 import React, { useEffect, useRef, useCallback } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 
