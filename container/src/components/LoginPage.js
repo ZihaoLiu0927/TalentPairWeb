@@ -1,5 +1,5 @@
 import { mount } from 'login/LoginIndex';
-import React, { useEffect, useRef, useCallback, useState } from 'react';
+import React, { useEffect, useRef, useCallback } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 
 export default ( { onSignIn } ) => {
