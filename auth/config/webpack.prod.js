@@ -11,6 +11,7 @@ const prodConfig = {
     plugins: [
         new ModuleFederationPlugin({
             name: 'login',
+            filename: 'remoteEntry.js',
             exposes: {
                 './LoginIndex': './src/bootstrap'
             },

@@ -6,11 +6,13 @@ const packageJson = require('../package.json');
 const prodConfig = {
     mode: 'production',
     output: {
-        filename: '[name].[contenthash].js'
+        filename: '[name].[contenthash].js',
+        publicPath: '/landing/latest/'
     },
     plugins: [
         new ModuleFederationPlugin({
             name: 'landing',
+            filename: 'remoteEntry.js',
             exposes: {
                 './LandingIndex': './src/bootstrap',
             },
