@@ -19,7 +19,7 @@ const devConfig = {
     },
     plugins: [
         new ModuleFederationPlugin({
-            name: 'login',
+            name: 'auth',
             filename: 'remoteEntry.js',
             exposes: {
                 './LoginIndex': './src/bootstrap'
