@@ -16,7 +16,6 @@ export default ( { onSignIn } ) => {
             location: location,
 
             onNavigate: ({ location: nextPathName }) => {
-                console.log("children want to go:", nextPathName);
                 navigate(nextPathName);
             },
 
