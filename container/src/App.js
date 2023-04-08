@@ -16,11 +16,11 @@ export default () => {
     return (
         <BrowserRouter>
             <div className='global_container'>
-                <Header isSignedIn={isSignedIn} onSignOut={()=>setIsSignedIn(false)}/>
+                <Header isSignedIn={ isSignedIn } onSignOut={()=>setIsSignedIn(false)}/>
                 <Suspense fallback={<div><Progress /> </div>}>
                     <Routes>
-                        <Route path='/auth/*' element={<div><LoginLazy onSignIn={()=>setIsSignedIn(true)} /> </div>} />
-                        <Route path='/*' element={<div><LandingLazy onSignIn={()=>setIsSignedIn(true)} /><Footer /> </div>} />
+                        <Route path='/auth/*' element={<div><LoginLazy onSignIn={ ()=>setIsSignedIn(true) } /> </div>} />
+                        <Route path='/*' element={<div><LandingLazy onSignIn={ ()=>setIsSignedIn(true) } /><Footer /> </div>} />
                         <Route path='*' element={<h1>404 Not Found</h1>} />
                     </Routes>
                 </Suspense>
