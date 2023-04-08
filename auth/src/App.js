@@ -2,8 +2,8 @@ import React, { useState, StrictMode } from 'react';
 import { Router, Route, Routes } from 'react-router-dom';
 import "./tailwind/style.css";
 
-import SignIn from './components/Signin';
-import SignUp from './components/Signup';
+import SignIn from './components/SignIn';
+import SignUp from './components/SignUp';
 
 export default ( props ) => {
 
