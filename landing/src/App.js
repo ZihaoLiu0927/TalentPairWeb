@@ -1,5 +1,5 @@
 import React, {useState, StrictMode } from 'react';
-import { Router, Route, Routes, useLocation, useNavigate } from 'react-router-dom';
+import { Router, Route, Routes } from 'react-router-dom';
 
 import './css/style.css';
 import SectionAbout from './components/SectionAbout';
