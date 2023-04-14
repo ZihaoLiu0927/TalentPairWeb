@@ -5,14 +5,14 @@ export default function Footer() {
     
     return(
         <div className='mt-40'>
-            <footer className="bg-white rounded-sm shadow dark:bg-emerald-950">
+            <footer className="rounded-sm shadow bg-emerald-950">
                 <div className="mx-10 p-4 md:py-8">
                     <div className="sm:flex sm:items-center sm:justify-between">
                         <div className="flex items-center mb-4 sm:mb-0">
                             <img src={logo} className="h-8 mr-3" alt="Flowbite Logo" />
-                            <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">TalentPair</span>
+                            <span className="self-center text-2xl font-semibold whitespace-nowrap">TalentPair</span>
                         </div>
-                        <ul className="flex flex-wrap items-center mb-6 text-2xl font-medium text-gray-500 sm:mb-0 dark:text-gray-400">
+                        <ul className="flex flex-wrap items-center mb-6 text-2xl font-medium text-gray-500 sm:mb-0">
                             <li>
                                 <a href="#" className="mr-4 hover:underline md:mr-6 ">About</a>
                             </li>
@@ -28,7 +28,7 @@ export default function Footer() {
                         </ul>
                     </div>
                     <hr className="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
-                    <span className="block text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2023 TalentPair. All Rights Reserved.</span>
+                    <span className="block text-gray-500 sm:text-center dark:text-gray-400">© 2023 TalentPair. All Rights Reserved.</span>
                 </div>
             </footer>
         </div>

@@ -22,7 +22,6 @@ export default ( props ) => {
         <div>
             <Router location={location || isolationLocation} navigator={history}>
               <Routes>
-                <Route exact path="/intro" element={<div><SectionIntro/></div>} />
                 <Route path="/" element={<div><SectionAbout /><SectionIntro /></div>} />
               </Routes>
             </Router>
