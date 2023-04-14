@@ -120,7 +120,7 @@ body {
 .section-about {
   animation: moveInShade 1.5s ease-in;
   position: relative;
-  padding: 20rem 0;
+  padding: 0 0 20rem 0;
   height: 100%; }
   .section-about--fig-img {
     object-fit: contain;

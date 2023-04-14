@@ -18,7 +18,7 @@ export default ( props ) => {
 
     return (
       <StrictMode>
-        <div>
+        <div className='auth-container'>
             <Router location={location || isolationLocation} navigator={history}>
               <Routes>
                 <Route path="/auth/signup" element={<SignUp onSignIn={onSignIn} />} />

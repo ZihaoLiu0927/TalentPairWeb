@@ -4,7 +4,7 @@ import logo from '../../img/logo.png';
 export default function Footer() {
     
     return(
-        <div>
+        <div className='mt-40'>
             <footer className="bg-white rounded-sm shadow dark:bg-gray-500">
                 <div className="mx-10 p-4 md:py-8">
                     <div className="sm:flex sm:items-center sm:justify-between">
