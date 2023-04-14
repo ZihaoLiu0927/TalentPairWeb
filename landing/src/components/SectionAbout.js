@@ -13,7 +13,7 @@ export default function SectionAbout() {
               </div>
               <div className="flex-1-of-3">
                 <div className="section-about-text u-center-text">
-                    <h1 className="heading-primary--main u-margin-top-huge">TalentPair </h1>
+                    <h1 className="heading-primary--main u-margin-top-huge">TalentPair</h1>
                     <h1 className="heading-primary--sub u-margin-left-small u-margin-right-small u-margin-bottom-big"> Matching Making for Tech Startups </h1>
                     <h1 className="heading_secondary u-margin-left-huge u-margin-right-huge">TalentPair aims to match tech job seekers with startup recruiters efficiently and affordably.</h1>
                 </div>

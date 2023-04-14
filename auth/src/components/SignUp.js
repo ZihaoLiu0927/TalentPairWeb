@@ -34,7 +34,7 @@ export default function SignUp( { onSignIn } ) {
                     <div className="flex justify-end pb-5">
                         <div>
                             <Link to='/auth/signin' className="focus:shadow-outline focus:outline-none text-white py-2 px-4 rounded">
-                                Back to sign in page
+                                Back to sign in
                             </Link>
                         </div>
                     </div>
