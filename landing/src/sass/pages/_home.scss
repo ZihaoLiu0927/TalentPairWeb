@@ -4,8 +4,30 @@
 
     position: relative;
 
-    padding: 0 0 20rem 0;
+    padding: 0 0 15rem 0;
     height: 100%;
+
+    &--right-panel {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        height: 100%;
+    }
+
+    &--contain-img-2 {
+        flex: 2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%; 
+    }
+
+    &--text {
+        flex: 3;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
 
     &--fig {
 
@@ -14,10 +36,12 @@
             width:100%;
             height:100%;
         }
-    }
 
-    &--text {
-        padding: 0;
+        &-img-2 {
+            object-fit: contain;
+            width:80%;
+            height:100%;
+        }
     }
 }
 
