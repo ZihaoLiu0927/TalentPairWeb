@@ -20,13 +20,13 @@ export default function Header( { isSignedIn, onSignOut } ) {
         <div className="text-sm flex-grow"></div>
 
         <div className="inline-block mr-16">
-          <Link to='/' onClick={onClick} className="inline-block mt-2 text-3xl font-semibold text-cyan-400 hover:text-white mr-8"> Home
+          <Link to='/' className="inline-block mt-2 text-3xl font-semibold text-cyan-400 hover:text-white mr-8"> Home
           </Link>
 
-          <Link to='/applicant' onClick={onClick} className="inline-block mt-2 text-3xl font-semibold text-cyan-400 hover:text-white mr-8"> Applicant Demo
+          <Link to='/applicant' className="inline-block mt-2 text-3xl font-semibold text-cyan-400 hover:text-white mr-8"> Applicant Demo
           </Link>
 
-          <Link to='/recruiter' onClick={onClick} className="inline-block mt-2 text-3xl font-semibold text-cyan-400 hover:text-white mr-8">  Recruiter Demo
+          <Link to='/recruiter' className="inline-block mt-2 text-3xl font-semibold text-cyan-400 hover:text-white mr-8">  Recruiter Demo
           </Link>
         </div>
         <div>
