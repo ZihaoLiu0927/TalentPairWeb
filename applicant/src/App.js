@@ -21,7 +21,7 @@ export default ( props ) => {
         <div>
             <Router location={location || isolationLocation} navigator={history}>
               <Routes>
-                <Route path="/" element={<div><ApplicantDemo /><ApplicantDemo /></div>} />
+                <Route path="/applicant" element={<div><ApplicantDemo /><ApplicantDemo /></div>} />
               </Routes>
             </Router>
         </div>
