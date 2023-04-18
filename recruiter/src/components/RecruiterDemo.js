@@ -8,7 +8,7 @@ import recommendation from '../../img/recommendation.png';
 export default function RecruiterDemo() {
     return (
         <div className="recruiter-demo"> 
-            <div className = "flex-container">
+            <div className = "flex-container u-margin-top-huge">
               <div className="flex-2-of-3">
                 <div className="recruiter-demo-text">
                     <h1 className="heading-primary--sub u-margin-left-small u-margin-right-small u-margin-bottom-medium u-center-text"> Enhancing Recruitment with a Holistic Matching Algorithm </h1>

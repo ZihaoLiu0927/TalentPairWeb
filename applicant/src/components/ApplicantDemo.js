@@ -8,7 +8,7 @@ import personality from '../../img/personality.png';
 export default function ApplicantDemo() {
     return (
         <div className="applicant-demo"> 
-            <div className = "flex-container">
+            <div className = "flex-container u-margin-top-huge">
               <div className="flex-2-of-3">
                 <div className="applicant-demo-text">
                     <h1 className="heading-primary--sub u-margin-left-small u-margin-right-small u-margin-bottom-medium u-center-text"> Crafting a Comprehensive Job Seeker Profile </h1>
