@@ -1,4 +1,4 @@
-import { mount } from 'landing/LandingIndex';
+import { mount } from 'applicant/ApplicantIndex';
 import React, { useEffect, useRef, useCallback, useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 
