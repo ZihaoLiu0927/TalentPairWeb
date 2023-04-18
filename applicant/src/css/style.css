@@ -1,0 +1,133 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  box-sizing: border-box; }
+
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  line-height: 1.7;
+  color: #777;
+  padding: 3rem; }
+
+.heading-primary {
+  margin-bottom: 6rem;
+  display: block; }
+  .heading-primary--main {
+    color: #777;
+    font-size: 3rem;
+    font-weight: 700;
+    letter-spacing: .5rem; }
+    .heading-primary--main:hover {
+      transform: translateY(-0.8rem) scale(1.05);
+      transition: all .3s;
+      cursor: grab; }
+  .heading-primary--sub {
+    color: #23C7AC;
+    font-size: 2.5rem;
+    font-weight: 400;
+    letter-spacing: .1rem; }
+    .heading-primary--sub:hover {
+      transform: translateY(-0.8rem) scale(1.05);
+      transition: all .3s;
+      cursor: grab; }
+
+.heading_secondary {
+  color: #000;
+  font-size: 2.5rem;
+  font-weight: 400; }
+
+.u-center-text {
+  text-align: center !important; }
+
+.u-margin-bottom-big {
+  margin-bottom: 8rem !important; }
+
+.u-margin-bottom-medium {
+  margin-bottom: 4rem !important; }
+
+.u-margin-bottom-small {
+  margin-bottom: 2rem !important; }
+
+.u-margin-top-medium {
+  margin-top: 4rem !important; }
+
+.u-margin-top-big {
+  margin-top: 8rem !important; }
+
+.u-margin-top-huge {
+  margin-top: 10rem !important; }
+
+.u-margin-top-2huge {
+  margin-top: 14rem !important; }
+
+.u-margin-left-huge {
+  margin-left: 12rem !important; }
+
+.u-margin-left-big {
+  margin-left: 8rem !important; }
+
+.u-margin-left-medium {
+  margin-left: 4rem !important; }
+
+.u-margin-left-small {
+  margin-left: 2rem !important; }
+
+.u-margin-right-huge {
+  margin-right: 12rem !important; }
+
+.u-margin-right-big {
+  margin-right: 8rem !important; }
+
+.u-margin-right-medium {
+  margin-right: 4rem !important; }
+
+.u-margin-right-small {
+  margin-right: 2rem !important; }
+
+@keyframes moveInShade {
+  0% {
+    opacity: 0; }
+  80% {
+    opacity: .7; }
+  100% {
+    opacity: 1; } }
+
+.flex-container {
+  display: flex;
+  flex-flow: row nowrap; }
+
+.flex-1-of-2 {
+  flex: 1;
+  margin: 1rem;
+  padding: 2rem; }
+
+.flex-1-of-3 {
+  flex: 1;
+  margin: 0rem;
+  padding: 0rem; }
+
+.flex-2-of-3 {
+  flex: 2;
+  margin: 0rem;
+  padding: 0rem; }
+
+.applicant-demo {
+  animation: moveInShade 1.5s ease-in; }
+  .applicant-demo--signlink, .applicant-demo--signlink:link, .applicant-demo--signlink:visited {
+    display: inline-block;
+    margin-left: 4rem;
+    margin-top: 3rem;
+    font-size: 3rem;
+    color: red; }
+  .applicant-demo--signlink:hover {
+    transform: translateY(-0.6rem);
+    transition: all .3s; }

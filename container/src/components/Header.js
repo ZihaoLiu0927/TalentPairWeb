@@ -20,15 +20,14 @@ export default function Header( { isSignedIn, onSignOut } ) {
         <div className="text-sm flex-grow"></div>
 
         <div className="inline-block mr-16">
-          <a href="#" className="inline-block mt-2 text-3xl font-semibold text-cyan-400 hover:text-white mr-8">
-            Docs
-          </a>
-          <a href="#" className="inline-block mt-2 text-3xl font-semibold text-cyan-400 hover:text-white mr-8">
-            Examples
-          </a>
-          <a href="#" className="inline-block mt-2 text-3xl font-semibold text-cyan-400 hover:text-white">
-            Blog
-          </a>
+          <Link to='/' onClick={onClick} className="inline-block mt-2 text-3xl font-semibold text-cyan-400 hover:text-white mr-8"> Home
+          </Link>
+
+          <Link to='/applicant' onClick={onClick} className="inline-block mt-2 text-3xl font-semibold text-cyan-400 hover:text-white mr-8"> Applicant Demo
+          </Link>
+
+          <Link to='/recruiter' onClick={onClick} className="inline-block mt-2 text-3xl font-semibold text-cyan-400 hover:text-white mr-8">  Recruiter Demo
+          </Link>
         </div>
         <div>
           <Link to={isSignedIn ? '/' : '/auth/signin'} onClick={onClick} className="inline-block text-3xl px-4 py-2 font-semibold leading-none border rounded text-white border-white hover:border-transparent hover:text-teal-500 hover:bg-white mt-4">
