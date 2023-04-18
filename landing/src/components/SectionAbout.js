@@ -6,12 +6,12 @@ export default function SectionAbout() {
     return (
         <div className="section-about"> 
             <div className = "flex-container">
-              <div className="flex-2-of-3">
+              <div className="flex-1-of-3">
                 <div className="section-about--fig">
                     <img src={imgabout} alt='Fig about' className="section-about--fig-img"/>
                 </div>
               </div>
-              <div className="flex-1-of-3">
+              <div className="flex-2-of-3">
                 <div className='section-about--right-panel'>
                   <div className="section-about--text u-center-text">
                       <h1 className="heading-primary--main u-margin-top-huge">TalentPair</h1>
