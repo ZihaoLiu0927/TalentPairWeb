@@ -8,6 +8,8 @@ import Progress from './components/Progress';
 
 const LandingLazy = lazy(()=>import('./components/LandingPage'));
 const LoginLazy = lazy(()=>import('./components/LoginPage'));
+const ApplicantLazy = lazy(()=>import('./components/ApplicantPage'));
+const RecruiterLazy = lazy(()=>import('./components/RecruiterPage'));
 
 export default () => {
 
@@ -21,6 +23,8 @@ export default () => {
                     <Routes>
                         <Route path='/auth/*' element={<div><LoginLazy onSignIn={ ()=>setIsSignedIn(true) } /> </div>} />
                         <Route path='/*' element={<div><LandingLazy onSignIn={ ()=>setIsSignedIn(true) } /><Footer /> </div>} />
+                        <Route path='/applicant/*' element={<div><ApplicantLazy onSignIn={ ()=>setIsSignedIn(true) } /><Footer /> </div>} />
+                        <Route path='/recruiter/*' element={<div><RecruiterLazy onSignIn={ ()=>setIsSignedIn(true) } /><Footer /> </div>} />
                         <Route path='*' element={<h1>404 Not Found</h1>} />
                     </Routes>
                 </Suspense>

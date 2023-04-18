@@ -1,4 +1,5 @@
 const { merge } = require('webpack-merge');
+const HTMLWebpackPlugin = require('html-webpack-plugin');
 const ModuleFederationPlugin = require('webpack/lib/container/ModuleFederationPlugin');
 const commonConfig = require('./webpack.common');
 const packageJson = require('../package.json');
@@ -6,25 +7,27 @@ const packageJson = require('../package.json');
 const devConfig = {
     mode: 'development',
     output: {
-        publicPath: 'http://localhost:8080/',
+        publicPath: 'http://localhost:8083/',
     },
     devtool: 'inline-source-map',
     devServer: {
-        port: 8080,
+        port: 8083,
         historyApiFallback: {
             index: '/index.html',
         }
     },
     plugins: [
         new ModuleFederationPlugin({
-            name: 'container',
-            remotes: {
-                landing: 'landing@http://localhost:8081/remoteEntry.js',
-                auth: 'auth@http://localhost:8082/remoteEntry.js',
-                applicant: 'applicant@http://localhost:8083/remoteEntry.js',
-                recruiter: 'recruiter@http://localhost:8084/remoteEntry.js'
+            name: 'applicant',
+            filename: 'remoteEntry.js',
+            exposes: {
+                './ApplicantIndex': './src/bootstrap',
             },
             shared: packageJson.dependencies,
+        }),
+
+        new HTMLWebpackPlugin({
+            template: './public/index.html',
         }),
     ],
 };
